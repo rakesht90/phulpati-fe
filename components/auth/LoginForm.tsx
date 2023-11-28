@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { useForm } from "react-hook-form";
 
@@ -11,9 +12,13 @@ const LoginForm = () => {
   const { handleSubmit, register, setError } = useForm<FormData>({
     defaultValues: { email: "", password: "" },
   });
+  const router = useRouter();
   const login = (values: FormData) => {
     const data = { userName: values.email, password: values.password };
     console.log(data);
+    if (data.userName === "user1@gmail.com" && data.password === "pass1") {
+      router.push("/");
+    }
   };
 
   return (
