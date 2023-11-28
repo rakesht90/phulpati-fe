@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <NavBar />
       <main className="flex min-h-screen flex-col items-center justify-between p-2 mt-4">
-        <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
+        <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-xl lg:flex">
           <h1>Home Page</h1>
         </div>
       </main>
